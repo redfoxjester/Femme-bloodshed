@@ -1,0 +1,14 @@
+import pygame
+import random
+from settings import *
+
+
+class Enemy:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.speed = enemy_speed
+
+    def update(self):
+        self.y += self.speed
+        pygame.draw.rect(screen, RED, (self.x, self.y, enemy_width, enemy_height))
