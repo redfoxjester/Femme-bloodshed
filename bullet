@@ -1,0 +1,13 @@
+import pygame
+from settings import *
+
+
+class Bullet:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.speed = bullet_speed
+
+    def update(self):
+        self.y -= self.speed
+        pygame.draw.rect(screen, RED, (self.x, self.y, bullet_width, bullet_height))
